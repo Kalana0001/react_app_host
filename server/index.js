@@ -91,6 +91,7 @@ app.get("/", (req , res) => {
        // console.log("result", result);
        // res.send("Hello Express");
   //  });
+  res.send("Server is running");
 });
 
 app.listen(4000, () => {
