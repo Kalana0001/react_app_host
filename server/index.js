@@ -11,6 +11,14 @@ const db = mysql.createPool({
     database: "crud"
 });
 
+// Test database connection
+db.getConnection((error) => {
+    if (error) {
+        console.error("Database connection failed:", error.message);
+    } else {
+        console.log("Successfully connected to the database.");
+    }
+});
 
 app.use(cors());
 app.use(express.json());
